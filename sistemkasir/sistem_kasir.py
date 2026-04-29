@@ -30,6 +30,7 @@ class Keranjang:
     for barang in self.daftar_barang:
       total += barang.harga
     return total
+  
   @property
   def bayar(self):
     return self.__bayar
@@ -39,12 +40,15 @@ class Keranjang:
     if total_belanja <= 0:
       print("Keranjang kosong. harap isi keranjang.")
       return
+    if jumlah_bayar <= 0:
+      print("Jumlah bayar harus lebih dari 0.")
+      return
     kembalian = jumlah_bayar - total_belanja
     if kembalian >= 0:
       print(f"Berhasil Bayar RP {jumlah_bayar}, Kembalian RP {kembalian}")
       self.__bayar = jumlah_bayar
     else:
-      print(f"Jumlah bayar tidak cukup. Total belanja: RP {total_belanja}")
+      print(f"Jumlah bayar tidak cukup.")
       
   
   def cetak_struk(self, member=False):

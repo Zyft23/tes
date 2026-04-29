@@ -9,8 +9,8 @@ keranjang_saya = Keranjang()
 keranjang_saya.tambah_produk(p1, 2)
 keranjang_saya.tambah_produk(p2, 3)
 keranjang_saya.tambah_produk(p3, 1)
-keranjang_saya.hapus_produk(p1)
+keranjang_saya.hapus_produk(p1) 
 
 total = keranjang_saya.hitung_total()
 keranjang_saya.cetak_struk()
-keranjang_saya.bayar = 200000
+keranjang_saya.bayar = 100000
